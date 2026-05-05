@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fileman"
+version = "0.1.0"
+description = "Lightweight file management utilities: structured FileManager, key/path helpers, and directory creation"
+authors = [{ name = "Jonathan Camargo Leyva" }]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
