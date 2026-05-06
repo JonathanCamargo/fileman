@@ -16,10 +16,10 @@ From a local checkout (editable):
 pip install -e path/to/fileman
 ```
 
-From git (once a remote exists):
+From git:
 
 ```
-pip install git+https://github.com/<user>/fileman.git
+pip install git+https://github.com/JonathanCamargo/fileman.git
 ```
 
 ## Usage
