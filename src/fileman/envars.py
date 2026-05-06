@@ -40,10 +40,10 @@ def _global_env_path() -> Path:
 def _find_project_root(start: Path | None = None) -> Path | None:
     """Walk up from *start* looking for a directory that contains a .env file.
 
-    Falls back to the package root if nothing found.
+    When *start* is not given, falls back to the current working directory.
     """
     if start is None:
-        start = Path(__file__).resolve().parent
+        start = Path.cwd()
 
     for directory in [start, *start.parents]:
         candidate = directory / ".env"
